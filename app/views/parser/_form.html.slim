@@ -1,0 +1,8 @@
+br
+= form_for '', :url => import_file_path, html: { class: 'form-horizontal' }, multipart:true, remote: true do |f|
+  .form-group
+    = f.label 'Загрузить csv файл', class: 'control-label col-sm-2'
+    .col-sm-4
+      = f.file_field :file, class: 'form-control'
+    .col-sm-2
+      => f.submit 'Загрузить', class: 'btn btn-success'

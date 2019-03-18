@@ -1,0 +1,13 @@
+table.table.table-striped.table-bordered.table-hover.table-condensed
+  thead
+    tr
+      td Наименование
+      td Наименование
+      td Наименование
+      td Наименование
+      td Наименование
+  tbody
+  - @file_details.each do |detail|
+    tr
+      - detail.each do |val|
+        td = val

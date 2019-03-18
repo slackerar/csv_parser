@@ -3,7 +3,6 @@ class ParserController < ApplicationController
   end
 
   def import_file
-    console
     @file_details =  ParserFile.read_file(report_params[:file])
     if request.xhr?
       render :file_data, layout: false

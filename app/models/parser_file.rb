@@ -9,8 +9,10 @@ class ParserFile
         res = []
         row.to_h.values.each do |v|
           res = v.split(";")
-          res << Analysis.get_type_produce(v)  #TODO reg TY
+          res << Analysis.get_type_produce(v)
           res << Analysis.get_marks(v)
+          res << Analysis.get_prop(v)
+          res << Analysis.get_colors(v)
         end
         data << res
       end
